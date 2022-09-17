@@ -1,12 +1,15 @@
 import { StatusBar } from "expo-status-bar";
 import { useState } from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { SafeAreaView, StyleSheet, Text, View } from "react-native";
+import Homepage from "./src/screens/Home";
+import SpinAndWin from "./src/screens/Spin";
 
 export default function App() {
-  const [name, setName] = useState("Dabo dabo");
   return (
     <View style={styles.container}>
-      <Text>{name}</Text>
+      {/* <Homepage />
+       */}
+      <SpinAndWin />
       <StatusBar style="auto" />
     </View>
   );
@@ -15,8 +18,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
+    paddingTop: 30,
+    paddingBottom: 30,
   },
 });
